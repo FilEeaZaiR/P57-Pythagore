@@ -25,7 +25,7 @@ function game3(){
 };
 
 //Login + connexion du bot :
-client.login('process.env.TOKEN');
+client.login(process.env.TOKEN);
 
 client.on("ready", () => {
     console.log("Connexion en cours ...");
