@@ -81,12 +81,12 @@ client.on(`message`, message =>{
     if(message.content.startsWith(prefix + "suggestion")) {
         let args = message.content.split(" ").slice(1);
         let ThingToEcho = args.join(" ")
-        var news_embed = new Discord.RichEmbed()
+        var suggestion_embed = new Discord.RichEmbed()
             .addField(`Suggestion de ${message.author.tag} :`, ThingToEcho)
             .setColor("RANDOM")
             .setFooter(`Suggestion - P57 | Pythagore`)
             .setTimestamp()
-        message.channel.send(news_embed)
+        message.guild.channels.find("name", "coin-admin").send(suggestion_embed)
         message.delete()
     }
 
