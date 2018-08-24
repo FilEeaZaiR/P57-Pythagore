@@ -76,6 +76,18 @@ client.on(`message`, message =>{
             return message.channel.send(" désolé, mais tu n'as pas la permission")
         }
     }
+    
+    if(message.content.startsWith(prefix + "suggestion")) {
+        let args = message.content.split(" ").slice(1);
+        let ThingToEcho = args.join(" ")
+        var news_embed = new Discord.RichEmbed()
+            .addField(`suggestion de ${message.author.tag} :`, ThingToEcho)
+            .setColor("RANDOM")
+            .setFooter(`Suggestion - P57 | Pythagore`)
+            .setTimestamp()
+        message.channel.send(news_embed)
+        message.delete()
+    }
 
     if(message.content.startsWith(prefix + "purge") || message.content.startsWith(prefix + "clear")) {
         let myrole = message.guild.member(client.user).hasPermission("MANAGE_MESSAGES"); //Récupère les droits nécessaires
