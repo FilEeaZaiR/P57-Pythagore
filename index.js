@@ -78,21 +78,21 @@ client.on(`message`, message =>{
         }
     }
     
-    if(message.content.startsWith(prefix + "annonce")) {
-        if(message.guild.member(message.author).roles.find("name", "Annonce")){
-            let args = message.content.split(" ").slice(1);
-            let ThingToEcho = args.join(" ")
-            var annonce_embed = new Discord.RichEmbed()
-                .addField("Annonce :", ThingToEcho)
-                .setColor("RANDOM")
-                .setFooter(`Annonce par ${message.author.tag} - P57 | Pythagore`)
-                .setTimestamp()
-            message.channel.send(annonce_embed)
-            message.delete()
-        }else{
-            return message.channel.send(" désolé, mais tu n'as pas la permission")
-        }
-    }
+    //if(message.content.startsWith(prefix + "annonce")) {
+        //if(message.guild.member(message.author).roles.find("name", "Annonce")){
+            //let args = message.content.split(" ").slice(1);
+            //let ThingToEcho = args.join(" ")
+            //var annonce_embed = new Discord.RichEmbed()
+                //.addField("Annonce :", ThingToEcho)
+                //.setColor("RANDOM")
+                //.setFooter(`Annonce par ${message.author.tag} - P57 | Pythagore`)
+                //.setTimestamp()
+            //message.channel.send(annonce_embed)
+            //message.delete()
+        //}else{
+            //return message.channel.send(" désolé, mais tu n'as pas la permission")
+        //}
+    //}
     
     if(message.content.startsWith(prefix + "suggestion")) {
         let args = message.content.split(" ").slice(1);
