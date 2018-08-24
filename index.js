@@ -47,6 +47,7 @@ client.on(`message`, message =>{
         .setTitle(`Besoin d'aide ?`)
         .setThumbnail(message.author.avatarURL)
         .addField(":tools: Voici mes commandes modérations et d'administration !\n\n",
+        ":thumbsup: :thumbsdown: " + prefix + "suggestion :" + ` Faire une Suggestion (commandes pour le bot ou tracks pour Pythagore57) !\n\n` +
         ":clipboard: " + prefix + "news :" + ` Faire une News !\n\n` +
         ":book: " + prefix + "report :" + ` report une personne ! (ex : P|report @FilEeaZair#1258 test)\n\n` +
         ":link: " + prefix + "link :" + ` liens des réseaux de Pythagore !\n\n` +
