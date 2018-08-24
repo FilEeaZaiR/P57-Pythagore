@@ -134,7 +134,7 @@ client.on(`message`, message =>{
         var link_embed = new Discord.RichEmbed()
         .setColor("RANDOM")
         .addField(":link: voici mes réseaux : \n\n",
-        "\n\nYouTube :\n https://www.youtube.com/channel/UCI0gT-5EEKgXq6xgwZ-kfXg"
+        "\n\nYouTube :\n https://www.youtube.com/channel/UCI0gT-5EEKgXq6xgwZ-kfXg" + 
         "\n\nGmail : \n tmpythagore57@gmail.com")
         .setFooter(`Commande utilisé par ${message.author.tag} - P57 | Pythagore`)
         .setTimestamp()
