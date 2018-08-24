@@ -35,7 +35,8 @@ client.on("ready", () => {
 client.on("guildMemberAdd", member => {
     const bvn = member.guild.channels.find(m => m.name === "général");
 if(!bvn) return;
-bvn.send(`Bienvenue ${member}, n'hésite pas à lire les #règles pour plus d'informations !`)
+let regles = message.guild.channels.find("name", "règles");
+bvn.send(`Bienvenue ${member}, n'hésite pas à lire les #` + regles + ` pour plus d'informations !`)
 })
 
 client.on(`message`, message =>{
