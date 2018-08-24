@@ -81,7 +81,7 @@ client.on(`message`, message =>{
         let args = message.content.split(" ").slice(1);
         let ThingToEcho = args.join(" ")
         var news_embed = new Discord.RichEmbed()
-            .addField(`suggestion de ${message.author.tag} :`, ThingToEcho)
+            .addField(`Suggestion de ${message.author.tag} :`, ThingToEcho)
             .setColor("RANDOM")
             .setFooter(`Suggestion - P57 | Pythagore`)
             .setTimestamp()
