@@ -190,24 +190,6 @@ client.on("messageDelete", (message) => {
       logs.send({embed})
   });
 
-  client.on('guildBanRemove', (guild, user)=> {
-      if(!guild) return;
-      const logs = guild.channels.find(m => m.name === "logs");
-      if (!guild.channels.exists('name','logs')) return;
-      guild.channels.find("name", "logs")
-      if (!logs) return;
-      let embed = new Discord.RichEmbed()
-      .setAuthor("Unban", user.avatarURL)
-      .setColor("#FE6F01")
-      .setTitle("Un utilisateur a été unban ! :white_check_mark:")
-      .setDescription(`Utilisateur unban : ${user}`)
-      .setThumbnail(user.avatarURL)
-      .addField("Nombre de membres", guild.memberCount)
-      .setFooter(`ID : ${user.id}`)
-      .setTimestamp()
-      logs.send({embed})
-  })
-
 client.on(`message`, message =>{
 
     if(message.content === prefix + "help") {
