@@ -305,7 +305,7 @@ client.on(`message`, message =>{
     }
 
     if(message.content.startsWith(prefix + "mute")) {
-        if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return message.channel.send("Vous n'avez pas la permission !");
+        if(!message.guild.member(message.author).hasPermission("MANAGE_GUILD")) return message.channel.send("Vous n'avez pas la permission !");
     
         if(message.mentions.users.size === 0) {
             return message.channel.send("Tu dois mentionner quelqu'un pour faire cette commande");
@@ -317,7 +317,7 @@ client.on(`message`, message =>{
         }
     
         let mute = message.guild.roles.find("name", "Mute");
-        if(!message.guild.member(client.user).hasPermission("ADMINISTRATOR")) return message.channel.send("Je n'ai pas la permission !");
+        if(!message.guild.member(client.user).hasPermission("MANAGE_GUILD")) return message.channel.send("Je n'ai pas la permission !");
         
         else{
             membre.addRole(mute)
@@ -326,7 +326,7 @@ client.on(`message`, message =>{
     }
 
     if(message.content.startsWith(prefix + "unmute")) {
-        if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return message.channel.send("Vous n'avez pas la permission !");
+        if(!message.guild.member(message.author).hasPermission("MANAGE_GUILD")) return message.channel.send("Vous n'avez pas la permission !");
     
         if(message.mentions.users.size === 0) {
             return message.channel.send("Tu dois mentionner quelqu'un pour faire cette commande");
@@ -338,7 +338,7 @@ client.on(`message`, message =>{
         }
     
         let mute = message.guild.roles.find("name", "Mute");
-        if(!message.guild.member(client.user).hasPermission("ADMINISTRATOR")) return message.channel.send("Je n'ai pas la permission !");
+        if(!message.guild.member(client.user).hasPermission("MANAGE_GUILD")) return message.channel.send("Je n'ai pas la permission !");
         
         else{
             membre.removeRole(mute)
